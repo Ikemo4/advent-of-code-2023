@@ -10,11 +10,12 @@ async function getSum() {
         const lines = data.split('\n');
         // Iterate through each line
         lines.forEach((line, index) => {
-            let leftDigit = 0;
+            let leftDigit;
             nums1thru10.forEach((term) => {
-                const index = line.indexOf()
+                const index = line.indexOf(term);
+                if (index < leftDigit) { leftDigit = index };
             })
-            const newStr = line.replace(/[A-Za-z]/g, "");
+            const newStr = line.replace(/[A-Za-z]/g, ""); //find index of first numerical character
             let sum = 0
             if (newStr.length > 1) {
                 num = newStr[0] + newStr[newStr.length - 1];

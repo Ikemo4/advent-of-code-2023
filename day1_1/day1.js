@@ -1,5 +1,5 @@
 const fs = require('fs');
-const filePath = 'input.txt';
+const filePath = 'day1_1/input.txt';
 let runningSum = 0;
 
 // Read the file asynchronously
